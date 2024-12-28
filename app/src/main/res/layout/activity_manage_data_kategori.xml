@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuUserActivity">
+    tools:context=".ManageDataKategori">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,35 +17,34 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewPanggilanUser"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:text="Tambah Kategori"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"/>
+
+        <EditText
+            android:id="@+id/editTextTambahKategori"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="User" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="Nama Kategori"
+            android:inputType="text" />
 
         <Button
-            android:id="@+id/buttonTambahUser"
-            android:layout_width="150dp"
+            android:id="@+id/buttonAddDataKategori"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="230dp"
-            android:text="Tambah User" />
-
-        <GridView
-            android:id="@+id/gridViewData"
-            android:layout_width="match_parent"
-            android:layout_height="460dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonTambahUser"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="300dp"
+            android:text="Simpan" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

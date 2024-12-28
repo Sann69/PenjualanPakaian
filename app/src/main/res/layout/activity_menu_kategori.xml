@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuUserActivity">
+    tools:context=".MenuKategoriActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewPanggilanUser"
+            android:id="@+id/textViewKategori"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -25,15 +25,15 @@
             android:textSize="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:text="User" />
+            android:text="Kategori" />
 
         <Button
-            android:id="@+id/buttonTambahUser"
+            android:id="@+id/buttonTambahKategori"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="230dp"
-            android:text="Tambah User" />
+            android:layout_marginLeft="240dp"
+            android:text="Tambah Kategori" />
 
         <GridView
             android:id="@+id/gridViewData"
@@ -44,7 +44,7 @@
             android:layout_marginRight="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonTambahUser"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTambahKategori"
             />
 
     </LinearLayout>

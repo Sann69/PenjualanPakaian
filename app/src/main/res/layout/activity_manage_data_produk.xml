@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuUserEditActivity">
+    tools:context=".ManageDataProduk">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,10 +17,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewEdit"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit User"
+            android:text="Data Produk"
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_marginLeft="20dp"
@@ -32,14 +32,14 @@
             android:layout_marginTop="10dp">
 
             <ImageView
-                android:id="@+id/imageViewEditUser"
+                android:id="@+id/imageViewTambahProduk"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:srcCompat="@tools:sample/avatars" />
         </FrameLayout>
 
         <Button
-            android:id="@+id/buttonInputEdit"
+            android:id="@+id/buttonInputTambahProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Input File"
@@ -48,71 +48,107 @@
             android:layout_marginRight="20dp"/>
 
         <EditText
-            android:id="@+id/editTextNamaEdit"
+            android:id="@+id/editTextIdTambahProduk"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Id"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextNamaTambahProduk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:ems="10"
             android:inputType="text"
             android:hint="Nama" />
 
         <EditText
-            android:id="@+id/editTextUmurEdit"
+            android:id="@+id/editTextHargaTambahProduk"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="number"
-            android:hint="Umur" />
+            android:hint="Harga" />
 
         <EditText
-            android:id="@+id/editTextTelpEdit"
+            android:id="@+id/editTextStokTambahProduk"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="number"
-            android:hint="Telp" />
+            android:hint="Stok" />
 
         <EditText
-            android:id="@+id/editTextJabatanEdit"
+            android:id="@+id/editTextDeskripsiTambahProduk"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="text"
-            android:hint="Jabatan" />
+            android:hint="Deskripsi" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonSimpanTambahProduk"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:text="Simpan" />
+
+            <Button
+                android:id="@+id/buttonEditTambahProduk"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Edit" />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp">
 
             <Button
-                android:id="@+id/buttonSimpanEdit"
-                android:layout_width="wrap_content"
+                android:id="@+id/buttonHapusProduk"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Simpan"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:text="Hapus" />
 
             <Button
-                android:id="@+id/buttonHapusEdit"
-                android:layout_width="wrap_content"
+                android:id="@+id/buttonViewDataProduk"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hapus" />
+                android:layout_marginLeft="10dp"
+                android:text="View" />
         </LinearLayout>
 
     </LinearLayout>

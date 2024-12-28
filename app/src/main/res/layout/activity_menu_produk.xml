@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuUserActivity">
+    tools:context=".MenuProdukActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewPanggilanUser"
+            android:id="@+id/textViewPanggilanProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -25,26 +25,26 @@
             android:textSize="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:text="User" />
+            android:text="Produk" />
 
         <Button
-            android:id="@+id/buttonTambahUser"
+            android:id="@+id/buttonTambahProduk"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="230dp"
-            android:text="Tambah User" />
+            android:text="Tambah Produk" />
 
         <GridView
             android:id="@+id/gridViewData"
             android:layout_width="match_parent"
             android:layout_height="460dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonTambahUser"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTambahProduk"
             />
 
     </LinearLayout>
