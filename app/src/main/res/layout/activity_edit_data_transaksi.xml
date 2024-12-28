@@ -51,14 +51,13 @@
             android:inputType="text"
             android:hint="Qty" />
 
-        <EditText
-            android:id="@+id/editTextText8"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Total" />
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="383dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:text="Total: 0"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
