@@ -29,6 +29,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="220dp"
             android:text="Tambah Transaksi" />
+         <GridView
+            android:id="@+id/gridViewData"
+            android:layout_width="409dp"
+            android:layout_height="582dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTambahTransaksi"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
