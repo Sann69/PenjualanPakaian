@@ -33,5 +33,21 @@ public class MenuUtamaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnMenuProduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtamaActivity.this, MenuKategoriActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMenuTransaksi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtamaActivity.this, MenuTransaksiActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
