@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 String enteredUsername = username.getText().toString();
                 String enteredPassword = password.getText().toString();
 
-                // Validate login credentials using database
+//                 Validate login credentials using database
                 Validate(enteredUsername, enteredPassword, db);
+
             }
         });
+
     }
     private void Validate(String Username, String Password, DatabaseHelper db){
         // Verify credentials from database

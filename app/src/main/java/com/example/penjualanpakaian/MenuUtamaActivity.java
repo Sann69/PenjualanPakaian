@@ -26,10 +26,19 @@ public class MenuUtamaActivity extends AppCompatActivity {
         btnMenuUser = (Button) findViewById(R.id.buttonMenuUsr);
         btnMenuProduk = (Button) findViewById(R.id.buttonMenuProduk);
         btnMenuTransaksi = (Button) findViewById(R.id.buttonMenuTransaksi);
+
         btnMenuUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuUtamaActivity.this, MenuUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMenuProduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuUtamaActivity.this, MenuKategoriActivity.class);
                 startActivity(intent);
             }
         });
