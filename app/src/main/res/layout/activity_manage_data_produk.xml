@@ -39,7 +39,7 @@
         </FrameLayout>
 
         <Button
-            android:id="@+id/buttonInputTambahProduk"
+            android:id="@+id/buttonInputGambarProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Input File"

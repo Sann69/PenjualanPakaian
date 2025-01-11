@@ -46,21 +46,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     SQLiteDatabase db;
 
 
-
-
-
-
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+//    @Override
+//    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+////        create ur table here
+//        // TODO: ADD ANOTHER TABLE HERE
+//        sqLiteDatabase.execSQL(CREATE_TABLE_USER);
+//        db = sqLiteDatabase;
+//
+//    }
+
+    //usr.pass
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-//        create ur table here
-        // TODO: ADD ANOTHER TABLE HERE
         sqLiteDatabase.execSQL(CREATE_TABLE_USER);
-        db = sqLiteDatabase;
 
+        // Tambahkan user default
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ID, "admin");
+        values.put(COLUMN_NAMA, "admin");
+        values.put(COLUMN_PASSWORD, "admin123");
+
+        sqLiteDatabase.insert(TABLE_USER, null, values);
     }
 
     @Override
@@ -238,6 +248,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    public Cursor searchUser(String nama){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String search = "SELECT * FROM pengguna WHERE nama LIKE ?";
+        return db.rawQuery(search, new String[]{"%" + nama + "%"});
+    }
 
 
 }

@@ -3,6 +3,7 @@ package com.example.penjualanpakaian;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -16,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +33,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MenuUserActivity extends AppCompatActivity {
 
@@ -38,6 +41,7 @@ public class MenuUserActivity extends AppCompatActivity {
 
     GridView gridUser;
     Button addUser;
+    SearchView searchUser;
     ArrayList<DataUser> data_user = new ArrayList<>();
     DataUser tempData;
 
@@ -56,6 +60,10 @@ public class MenuUserActivity extends AppCompatActivity {
 
         gridUser = findViewById(R.id.gridViewData);
         addUser = findViewById(R.id.buttonTambahUser);
+        searchUser = findViewById(R.id.searchUser);
+
+
+
 
         // Cek dan minta izin akses gambar
         showPermission();
@@ -74,8 +82,56 @@ public class MenuUserActivity extends AppCompatActivity {
                 setAdapterGrid();
             }
         }
+
+        searchUser.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchUsers(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchUsers(newText);
+                return false;
+            }
+
+
+        });
+
+
     }
 
+    private void searchUsers(String query){
+        Cursor cursor = databaseHelper.searchUser(query);
+
+        if (cursor != null && cursor.getCount() > 0) {
+            data_user.clear();
+
+            while (cursor.moveToNext()){
+                String id =  cursor.getString(cursor.getColumnIndexOrThrow("id"));
+                String nama = cursor.getString(cursor.getColumnIndexOrThrow("nama"));
+                int umur = cursor.getInt(cursor.getColumnIndexOrThrow("umur"));
+                String telepon =  cursor.getString(cursor.getColumnIndexOrThrow("telepon"));
+                String jabatan =  cursor.getString(cursor.getColumnIndexOrThrow("jabatan"));
+                String path =  cursor.getString(cursor.getColumnIndexOrThrow("path"));
+                String password =  cursor.getString(cursor.getColumnIndexOrThrow("password"));
+                DataUser user = new DataUser(id,nama,umur,telepon,jabatan,path,password);
+                data_user.add(user);
+
+            }
+
+            setAdapterGrid();
+
+        }else{
+            gridUser.setAdapter(null);
+        }
+
+        if (cursor != null){
+            cursor.close();
+
+        }
+    }
     class myListAdapter extends ArrayAdapter<DataUser> {
         public myListAdapter() {
             super(MenuUserActivity.this, R.layout.data_user, data_user);
