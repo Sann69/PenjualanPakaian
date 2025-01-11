@@ -28,7 +28,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:layout_marginTop="10dp">
 
             <ImageView
@@ -113,40 +113,49 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
 
             <Button
                 android:id="@+id/buttonSimpanTambahUsr"
-                android:layout_width="100dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Simpan" />
+                android:layout_weight="1"
+                android:text="Simpan"
+                android:layout_marginRight="10dp"/>
 
             <Button
                 android:id="@+id/buttonEditTambahUsr"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
                 android:text="Edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
             <Button
                 android:id="@+id/buttonHapusTambahUsr"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Hapus" />
+                android:text="Hapus"
+                android:layout_marginRight="10dp"/>
             <Button
                 android:id="@+id/buttonViewDatausr"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
                 android:text="View" />
         </LinearLayout>
 
