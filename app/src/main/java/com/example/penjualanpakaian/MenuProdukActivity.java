@@ -42,7 +42,7 @@ public class MenuProdukActivity extends AppCompatActivity {
         });
 
         btnKembali.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuProdukActivity.this, MenuUtamaActivity.class);
+            Intent intent = new Intent(MenuProdukActivity.this, MenuKategoriActivity.class);
             startActivity(intent);
             finish();
         });
