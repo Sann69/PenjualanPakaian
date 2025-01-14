@@ -22,7 +22,7 @@ public class MenuProdukActivity extends AppCompatActivity {
     private static final int STORAGE_PERMISSION_CODE = 100;
 
     GridView gridProduk;
-    Button btnTambahProduk, btnKembali;
+    Button btnTambahProduk, btnKembali, btnKategori;
     DatabaseHelperProduk databaseHelperProduk;
 
     @Override
@@ -34,18 +34,24 @@ public class MenuProdukActivity extends AppCompatActivity {
 
         gridProduk = findViewById(R.id.gridViewData);
         btnTambahProduk = findViewById(R.id.buttonTambahProduk);
-        btnKembali = findViewById(R.id.buttonKembali);
+//        btnKembali = findViewById(R.id.buttonKembali);
+        btnKategori = findViewById(R.id.buttonKategori);
+
 
         btnTambahProduk.setOnClickListener(v -> {
             Intent intent = new Intent(MenuProdukActivity.this, ManageDataProduk.class);
             startActivity(intent);
         });
 
-        btnKembali.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuProdukActivity.this, MenuUtamaActivity.class);
-            startActivity(intent);
-            finish();
-        });
+//        btnKembali.setOnClickListener(v -> {
+//            Intent intent = new Intent(MenuProdukActivity.this, MenuUtamaActivity.class);
+//            startActivity(intent);
+//            finish();
+//        });
+
+//        btnKategori.setOnClickListener( v -> {
+//            Intent intent = new Intent(MenuProdukActivity.this, MenuKategoriActivity.class);
+//        });
 
         // Periksa izin penyimpanan
         if (!checkStoragePermission()) {
