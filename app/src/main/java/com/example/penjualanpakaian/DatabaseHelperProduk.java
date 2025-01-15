@@ -20,6 +20,7 @@ public class DatabaseHelperProduk extends SQLiteOpenHelper {
     private static final String COLUMN_PRODUK_STOK = "stok";
     private static final String COLUMN_PRODUK_DESKRIPSI = "deskripsi";
     private static final String COLUMN_PRODUK_GAMBAR = "gambar_produk";
+    
 
     private static final String CREATE_TABLE_PRODUK = "CREATE TABLE IF NOT EXISTS " + TABLE_PRODUK + " ("
             + COLUMN_PRODUK_ID + " TEXT PRIMARY KEY, "

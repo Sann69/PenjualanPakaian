@@ -22,7 +22,7 @@ public class MenuProdukActivity extends AppCompatActivity {
     private static final int STORAGE_PERMISSION_CODE = 100;
 
     GridView gridProduk;
-    Button btnTambahProduk, btnKembali, btnKategori;
+    Button btnTambahProduk, btnKembali;
     DatabaseHelperProduk databaseHelperProduk;
 
     @Override
@@ -34,8 +34,8 @@ public class MenuProdukActivity extends AppCompatActivity {
 
         gridProduk = findViewById(R.id.gridViewData);
         btnTambahProduk = findViewById(R.id.buttonTambahProduk);
-//        btnKembali = findViewById(R.id.buttonKembali);
-        btnKategori = findViewById(R.id.buttonKategori);
+        btnKembali = findViewById(R.id.buttonKembali);
+//        btnKategori = findViewById(R.id.buttonKategori);
 
 
         btnTambahProduk.setOnClickListener(v -> {
@@ -43,15 +43,20 @@ public class MenuProdukActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-//        btnKembali.setOnClickListener(v -> {
-//            Intent intent = new Intent(MenuProdukActivity.this, MenuUtamaActivity.class);
-//            startActivity(intent);
-//            finish();
-//        });
+        btnKembali.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuProdukActivity.this, MenuUtamaActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
 //        btnKategori.setOnClickListener( v -> {
 //            Intent intent = new Intent(MenuProdukActivity.this, MenuKategoriActivity.class);
 //        });
+        btnKembali.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuProdukActivity.this, MenuKategoriActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
         // Periksa izin penyimpanan
         if (!checkStoragePermission()) {

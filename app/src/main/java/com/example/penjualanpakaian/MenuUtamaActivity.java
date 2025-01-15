@@ -32,7 +32,7 @@ public class MenuUtamaActivity extends AppCompatActivity {
         btnMenuProduk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuUtamaActivity.this, MenuProdukActivity.class);
+                Intent intent = new Intent(MenuUtamaActivity.this, MenuKategoriActivity.class);
                 startActivity(intent);
             }
         });

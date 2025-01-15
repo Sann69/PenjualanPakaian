@@ -35,20 +35,13 @@
             android:orientation="horizontal">
 
 
-<!--            <Button-->
-<!--                android:id="@+id/buttonKembali"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:text="Kembali" />-->
             <Button
-                android:id="@+id/buttonKategori"
+                android:id="@+id/buttonKembali"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Kategori"  />
+                android:text="Kembali" />
 
 
             <Button
